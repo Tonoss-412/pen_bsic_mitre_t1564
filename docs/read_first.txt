@@ -1,0 +1,12 @@
+•	Bước 1: Sinh viên sử dụng ls để kiểm tra các thư mục hiện có trên máy machine: 
+ls
+•	Bước 2: Sinh viên truy cập thư mục log và đọc file log tìm hiểu xem có gì nhạy cảm đã được ghi lại không: 
+cd log
+cat daily.log
+•	Bước 3: Sinh viên phát hiện password phát hiện được trong log để sau đó dùng steghide trích xuất thông tin các hình ảnh trong thư mục /image  
+steghide extract -sf <image_file> -p <password>
+•	Bước 4: Dữ liệu đã được trích xuất ra 1 file. Đọc file đó để quan sát thông tin được ẩn giấu của attacker  
+cat <extract_file>
+•	Bước 5: Sinh viên thực hiện biện pháp bảo vệ bằng cách xóa file ảnh có chứa thông tin này.
+rm <image_file>
+
